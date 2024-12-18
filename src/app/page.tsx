@@ -1,6 +1,8 @@
 import React from "react"
 import MaxWidthWrapper from "./components/max-width-wrapper"
 import Heading from "./components/heading"
+import { Check } from "lucide-react"
+import ShinyButton from "./components/ShinyButton"
 
 const page = () => {
   return (
@@ -16,6 +18,35 @@ const page = () => {
                   Delivered to your Discord
                 </span>
               </Heading>
+            </div>
+            <p className="text-base-/7 text-gray-600 max-w-prose text-center text-pretty">
+              PingPanda is the easiest way to monitor your SaaS. Get instant
+              notifications for{" "}
+              <span className="font-semibold text-gray-700">
+                sales, new users, or any other event
+              </span>{" "}
+              sent directly to your Discord.
+            </p>
+
+            <ul className="space-y-2 text-base/7 text-gray-600 text-left flex flex-col items-center sm:items-start">
+              {[
+                "Real-time Discord alerts for critical events",
+                "buy once, use forever",
+                "track sales, new users or many other event",
+              ].map((item, index) => (
+                <li key={index} className="flex gap-1.5 items-center text-left">
+                  <Check className="size-5 shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="w-full max-w-80">
+              <ShinyButton
+                href="/sign-up"
+                className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl"
+              >
+                Start For Free Today!
+              </ShinyButton>
             </div>
           </div>
         </MaxWidthWrapper>
